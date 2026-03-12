@@ -1,0 +1,189 @@
+import React from 'react'
+import { IoIosPeople } from "react-icons/io";
+import { CiMobile1 } from "react-icons/ci";
+import { TbWorldCheck } from "react-icons/tb";
+import { VscPackage } from "react-icons/vsc";
+import { GiArcheryTarget } from "react-icons/gi";
+import { FaLightbulb } from "react-icons/fa";
+
+import { Link } from 'react-router-dom'
+import { useTheme } from '../contexts/ThemeContext'
+import servicesData from '../data/servicesData.json'
+
+const Service = () => {
+  const { isDarkMode } = useTheme()
+  const iconMap = {
+    IoIosPeople,
+    CiMobile1,
+    TbWorldCheck,
+    VscPackage,
+    GiArcheryTarget,
+    FaLightbulb
+  }
+
+  const services = Object.values(servicesData)
+
+  const process = [
+    {
+      step: '01',
+      title: 'Discovery & Planning',
+      description: 'We start by understanding your business goals, target audience, and project requirements.'
+    },
+    {
+      step: '02',
+      title: 'Design & Strategy',
+      description: 'Our team creates detailed designs and strategies tailored to your specific needs.'
+    },
+    {
+      step: '03',
+      title: 'Development & Testing',
+      description: 'We build your solution using cutting-edge technologies and rigorous testing protocols.'
+    },
+    {
+      step: '04',
+      title: 'Launch & Support',
+      description: 'We launch your project and provide ongoing support to ensure continued success.'
+    }
+  ]
+
+  return (
+    <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
+      {/* Hero Section */}
+      <section className={`section-padding ${isDarkMode ? 'bg-gradient-to-tr from-primary to-secondary' : 'bg-gradient-to-tr from-primary to-secondary'} text-white relative overflow-hidden`}>
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container-custom relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-normal mb-6">
+              Our <span className="text-white">Services</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
+              Comprehensive digital solutions designed to accelerate your business growth 
+              and enhance your online presence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className={`section-padding ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className={`text-3xl md:text-4xl font-normal mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
+              What We <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Offer</span>
+            </h2>
+            <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              From web development to digital marketing, we provide end-to-end solutions 
+              to help your business thrive in the digital world.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {services.map((service, index) => {
+              const IconComponent = iconMap[service.icon]
+              return (
+                <Link
+                  key={service.id}
+                  to={`/service/${service.id}`}
+                  className="group block"
+                >
+                  <div className={`rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border group-hover:border-secondary ${isDarkMode ? 'bg-gray-700/50 border-gray-600' : 'bg-white border-gray-200'} hover:shadow-2xl`}>
+                    <div className={`w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <IconComponent className="text-white text-2xl md:text-3xl" />
+                    </div>
+                    
+                    <h3 className={`text-xl md:text-2xl font-normal mb-3 md:mb-4 group-hover:text-secondary transition-colors ${isDarkMode ? 'text-white' : 'text-primary'}`}>{service.title}</h3>
+                    <p className={`mb-4 md:mb-6 text-sm md:text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{service.description}</p>
+                    
+                    <ul className="space-y-2 mb-4 md:mb-6">
+                      {service.features.slice(0, 4).map((feature, idx) => (
+                        <li key={idx} className={`flex items-center ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                          <div className="w-2 h-2 bg-secondary rounded-full mr-3"></div>
+                          <span className="text-xs md:text-sm">{feature}</span>
+                        </li>
+                      ))}
+                      {service.features.length > 4 && (
+                        <li className="text-xs md:text-sm text-secondary font-medium">
+                          +{service.features.length - 4} more features
+                        </li>
+                      )}
+                    </ul>
+                    
+                    <div className={`border-t pt-3 md:pt-4 ${isDarkMode ? 'border-gray-600' : 'border-gray-200'}`}>
+                      <div className="flex justify-between items-center mb-2">
+                        <span className={`text-xs md:text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Starting Price</span>
+                        <span className={`font-semibold text-sm md:text-base ${isDarkMode ? 'text-white' : 'text-primary'}`}>{service.price}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className={`text-xs md:text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Duration</span>
+                        <span className={`font-semibold text-sm md:text-base ${isDarkMode ? 'text-secondary' : 'text-secondary'}`}>{service.duration}</span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className={`section-padding ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className={`text-3xl md:text-4xl font-normal mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
+              Our <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Process</span>
+            </h2>
+            <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+              A proven methodology that ensures successful project delivery and client satisfaction.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {process.map((step, index) => (
+              <div key={index} className={`text-center ${isDarkMode ? 'bg-gray-800/50' : 'bg-white'} rounded-2xl p-4 md:p-6 border ${isDarkMode ? 'border-gray-700' : 'border-gray-200'} hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
+                <div className="relative mb-4 md:mb-6">
+                  <div className={`w-16 h-16 md:w-20 md:h-20 ${isDarkMode ? 'bg-gradient-to-tr from-primary to-secondary' : 'bg-gradient-to-br from-white to-secondary'} rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg`}>
+                    <span className="text-white text-xl md:text-2xl font-normal">{step.step}</span>
+                  </div>
+                  {index < process.length - 1 && (
+                    <div className={`hidden lg:block absolute top-10 left-full w-full h-0.5 ${isDarkMode ? 'bg-gradient-to-r from-primary to-secondary' : 'bg-gradient-to-r from-primary to-secondary'} transform translate-x-4`}></div>
+                  )}
+                </div>
+                <h3 className={`text-lg md:text-xl font-normal mb-3 md:mb-4 ${isDarkMode ? 'text-white' : 'text-primary'}`}>{step.title}</h3>
+                <p className={`text-sm md:text-base ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className={`section-padding ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
+        <div className="container-custom">
+          <div className={`${isDarkMode ? 'bg-gradient-to-tr from-primary to-secondary' : 'bg-gradient-to-tr from-primary to-secondary'} rounded-3xl p-6 md:p-8 lg:p-12 text-center text-white shadow-xl relative overflow-hidden`}>
+            <div className="absolute inset-0 bg-black/10"></div>
+            <div className="relative z-10">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal mb-4 md:mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-lg md:text-xl mb-6 md:mb-8 text-white/90">
+                Let's discuss your project requirements and create a custom solution for your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" className={`${isDarkMode ? 'bg-white text-primary hover:bg-gray-100' : 'bg-white text-primary hover:bg-gray-100'} font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105`}>
+                  Start Your Project
+                </a>
+                <a href="/casestudy" className={`${isDarkMode ? 'border-white text-white hover:bg-white hover:text-primary' : 'border-white text-white hover:bg-white hover:text-primary'} bg-transparent font-semibold py-3 px-6 rounded-lg border-2 transition-all duration-300 transform hover:scale-105`}>
+                  View Our Work
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default Service
+
