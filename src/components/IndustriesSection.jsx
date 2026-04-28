@@ -111,7 +111,7 @@ const IndustriesSection = () => {
             <span className="text-white font-semibold text-xs md:text-sm">Our Expertise</span>
           </div>
           <h2 className={`text-3xl md:text-4xl lg:text-5xl font-normal mb-4 md:mb-6 animate-fadeInUp delay-200 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-            Industries We <span className="text-gradient">Transform</span>
+            Industries We <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Transform</span>
           </h2>
           <p className={`text-lg md:text-xl max-w-3xl mx-auto animate-fadeInUp delay-400 px-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
             We have extensive experience across various industries, delivering innovative solutions that drive growth and success.

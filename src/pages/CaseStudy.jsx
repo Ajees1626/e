@@ -96,7 +96,7 @@ const CaseStudy = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-normal mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-              Success <span className="text-gradient">Stories</span>
+              Success <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Stories</span>
             </h2>
             <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               Explore our portfolio of successful projects across various industries 

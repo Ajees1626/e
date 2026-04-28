@@ -66,7 +66,7 @@ const ServicesSection = () => {
               isDarkMode ? 'text-white' : 'text-primary'
             } mb-6 animate-fadeInUp delay-200`}
           >
-            Solutions That <span className="text-gradient">Drive Results</span>
+            Solutions That <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Drive Results</span>
           </h2>
           <p
             className={`text-xl ${

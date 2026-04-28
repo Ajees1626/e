@@ -99,7 +99,7 @@ const ClientLogosSection = () => {
             }`}
           >
             Trusted by{" "}
-            <span className="text-gradient font-semibold">150+ Brands</span>
+            <span className={`${isDarkMode ? "text-gradient-dark" : "text-gradient"} font-semibold`}>150+ Brands</span>
           </h2>
           <p
             className={`max-w-2xl mx-auto text-base md:text-lg leading-relaxed ${

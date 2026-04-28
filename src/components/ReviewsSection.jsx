@@ -162,7 +162,7 @@ const ReviewsSection = () => {
             <span className="text-white font-semibold text-sm">Client Testimonials</span>
           </div>
           <h2 className={`text-4xl md:text-5xl font-normal ${isDarkMode ? 'text-white' : 'text-primary'} mb-6 animate-fadeInUp delay-200`}>
-            What Our <span className="text-gradient">Clients Say</span>
+            What Our <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Clients Say</span>
           </h2>
           <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto animate-fadeInUp delay-400`}>
             Hear from our satisfied clients about their experience working with Pixdot.

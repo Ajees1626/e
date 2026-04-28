@@ -69,7 +69,7 @@ const Service = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-normal mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-              What We <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Offer</span>
+              What We <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Offer</span>
             </h2>
             <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               From web development to digital marketing, we provide end-to-end solutions 
@@ -131,7 +131,7 @@ const Service = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-normal mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-              Our <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Process</span>
+              Our <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Process</span>
             </h2>
             <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               A proven methodology that ensures successful project delivery and client satisfaction.

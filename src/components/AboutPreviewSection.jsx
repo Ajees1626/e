@@ -11,7 +11,7 @@ const AboutPreviewSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className={`text-4xl md:text-5xl font-normal ${isDarkMode ? 'text-white' : 'text-primary'} mb-6`}>
-              About <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Pixdot</span>
+              About <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Pixdot</span>
             </h2>
             <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-6 leading-relaxed`}>
             At Pixdot, we deliver creative and strategic branding, digital, and business development solutions that drive real results. 

@@ -141,6 +141,19 @@
     background-clip: text;
     color: transparent;
   }
+
+  /* Same accent gradient feel on dark backgrounds — primary is invisible on gray-900 */
+  .text-gradient-dark {
+    background: linear-gradient(
+      to right,
+      #e2e8f0,
+      var(--color-secondary),
+      #22d3ee
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
   
   .scrollbar-hide {
     -ms-overflow-style: none;

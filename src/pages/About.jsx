@@ -102,7 +102,7 @@ const About = () => {
         <div className="container-custom">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal mb-3 sm:mb-4 md:mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-              Our <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Values</span>
+              Our <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Values</span>
             </h2>
             <p className={`text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto px-4 sm:px-0 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               These core values guide everything we do and shape our company culture.
@@ -133,7 +133,7 @@ const About = () => {
               <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">Leadership Team</span>
             </div>
             <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal mb-4 sm:mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-              Meet Our <span className="text-gradient">Directors</span>
+              Meet Our <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Directors</span>
             </h2>
             <p className={`text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto px-4 sm:px-0 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               Visionary leaders driving innovation and excellence in every project
@@ -205,7 +205,7 @@ const About = () => {
         <div className="container-custom">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal mb-3 sm:mb-4 md:mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-              Our <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Journey</span>
+              Our <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Journey</span>
             </h2>
             <p className={`text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto px-4 sm:px-0 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               Key milestones in our company's growth and evolution.

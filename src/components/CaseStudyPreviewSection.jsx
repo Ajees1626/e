@@ -33,7 +33,7 @@ const CaseStudyPreviewSection = () => {
       <div className="container-custom">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className={`text-4xl md:text-5xl font-normal ${isDarkMode ? 'text-white' : 'text-primary'} mb-6 animate-fadeInUp`}>
-            Success <span className="text-gradient">Stories</span>
+            Success <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Stories</span>
           </h2>
           <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto animate-fadeInUp delay-200`}>
             Real-world results from our recent projects and client transformations.

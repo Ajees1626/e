@@ -149,7 +149,7 @@ const Solutions = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-normal mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-              Our <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Solutions</span>
+              Our <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Solutions</span>
             </h2>
             <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               {selectedCategory === 'All' 
@@ -218,7 +218,7 @@ const Solutions = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-normal mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-              Our <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Process</span>
+              Our <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Process</span>
             </h2>
             <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               A proven methodology that ensures successful solution delivery and maximum ROI.
@@ -249,7 +249,7 @@ const Solutions = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-normal mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-              Industries We <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Serve</span>
+              Industries We <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Serve</span>
             </h2>
             <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               Our solutions are tailored to meet the unique challenges and opportunities across various industries.
@@ -291,7 +291,7 @@ const Solutions = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-normal mb-6 ${isDarkMode ? 'text-white' : 'text-primary'}`}>
-              Technology <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Stack</span>
+              Technology <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Stack</span>
             </h2>
             <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               We use cutting-edge technologies and proven frameworks to build robust, scalable solutions.

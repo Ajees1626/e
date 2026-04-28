@@ -51,7 +51,7 @@ const ServiceDetail = () => {
       <div className={`${service.bgColor} py-20`}>
         <div className="container-custom">
           <Link 
-            to="/service" 
+            to="/services" 
             className="inline-flex items-center text-primary hover:text-secondary mb-8 transition-colors"
           >
             <FaArrowLeft className="mr-2" />

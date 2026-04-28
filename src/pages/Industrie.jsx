@@ -56,7 +56,7 @@ const Industrie = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className={`section-padding ${isDarkMode ? 'bg-gray-800' : 'bg-gradient-to-tr from-primary to-secondary'} text-white`}>
+      <section className={`section-padding ${isDarkMode ? 'bg-gradient-to-tr from-primary to-secondary' : 'bg-gradient-to-tr from-primary to-secondary'} text-white relative overflow-hidden`}>
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-normal mb-6">
@@ -75,7 +75,7 @@ const Industrie = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-normal ${isDarkMode ? 'text-white' : 'text-primary'} mb-6`}>
-              Industries We <span className="text-gradient">Serve</span>
+              Industries We <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Serve</span>
             </h2>
             <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto`}>
               Our deep industry expertise allows us to deliver solutions that address 

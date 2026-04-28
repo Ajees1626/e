@@ -327,7 +327,7 @@ const Contact = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-normal ${isDarkMode ? 'text-white' : 'text-primary'} mb-6`}>
-              Find <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Us</span>
+              Find <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Us</span>
             </h2>
             <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto`}>
               Visit our office or get in touch with us for your next project.
@@ -411,7 +411,7 @@ const Contact = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-normal ${isDarkMode ? 'text-white' : 'text-primary'} mb-6`}>
-              Frequently Asked <span className={`${isDarkMode ? 'text-white' : 'text-gradient'}`}>Questions</span>
+              Frequently Asked <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Questions</span>
             </h2>
             <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto`}>
               Find answers to common questions about our services and process.

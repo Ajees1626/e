@@ -82,7 +82,7 @@ const ProjectPage = () => {
             <span className="text-white font-semibold text-sm">Creative Portfolio</span>
           </div>
           <h2 className={`text-4xl md:text-5xl font-normal ${isDarkMode ? 'text-white' : 'text-primary'} mb-6 animate-fadeInUp delay-200`}>
-            Design <span className="text-gradient">Categories</span>
+            Design <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Categories</span>
           </h2>
           <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto animate-fadeInUp delay-400`}>
             Choose a design category to explore our creative projects across logo design, branding, and digital marketing.

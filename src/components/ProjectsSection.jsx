@@ -119,7 +119,7 @@ const ProjectsSection = () => {
             <span className="text-white font-semibold text-sm">Our Portfolio</span>
           </div>
           <h2 className={`text-4xl md:text-5xl font-normal ${isDarkMode ? 'text-white' : 'text-primary'} mb-6`}>
-            Our <span className="text-gradient">Projects</span>
+            Our <span className={`${isDarkMode ? 'text-gradient-dark' : 'text-gradient'}`}>Projects</span>
           </h2>
           <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-3xl mx-auto animate-fadeInUp delay-400`}>
             Choose a design category to explore our creative projects across logo design, branding, and digital marketing.
